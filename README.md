@@ -1,2 +1,2 @@
 # BrickBreaker
- I am creating this game to use for a lesson in loops and arrays.
+ I am creating this game to use in a lesson about loops and arrays.
