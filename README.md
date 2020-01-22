@@ -1,2 +1,2 @@
 # BrickBreaker
- Game that I made and used in a lesson on nested loops and arrays.
+ I am creating this game to use for a lesson in loops and arrays.
