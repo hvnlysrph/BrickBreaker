@@ -21,7 +21,7 @@ public class BallBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump") && ballInPlay == false)
+        if (Input.GetButtonDown("Jump") && !ballInPlay)
         {
             transform.parent = null;
             ballInPlay = true;

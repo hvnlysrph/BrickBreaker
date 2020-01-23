@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class BrickBehavior : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private void OnCollisionEnter(Collision collision)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        Debug.Log("hit");
+        if(collision.gameObject.tag == "ball")
+        {
+            GameManager.instance.bricksInPlay--;
+            Destroy(gameObject);
+        }
     }
 }

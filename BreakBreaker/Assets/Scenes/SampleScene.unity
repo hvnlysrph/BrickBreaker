@@ -433,6 +433,10 @@ MonoBehaviour:
     type: 3}
   paddle: {fileID: 4179861434653889669, guid: 5a375ebb914d53e419c83561f1575e93, type: 3}
   livesText: {fileID: 0}
+  rows: 10
+  columns: 8
+  lives: 3
+  bricksInPlay: 0
   inPlay: 0
 --- !u!1 &1453282532
 GameObject:
@@ -588,7 +592,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2084101014}
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: -0.49, y: -5.71, z: 0}
+  m_LocalPosition: {x: -0.49, y: -5.71, z: 1.97}
   m_LocalScale: {x: 1, y: 24.555199, z: 10.66}
   m_Children: []
   m_Father: {fileID: 1605785625}

@@ -13,7 +13,9 @@ public class GameManager : MonoBehaviour
 
     GameObject[] bricks;
 
-    int rows = 10, columns = 8, lives =3;
+
+    [SerializeField] int rows = 10, columns = 8; 
+    [HideInInspector] public int lives =3, bricksInPlay;
     float posX, posY;
 
     [HideInInspector] public bool inPlay;
@@ -37,6 +39,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(bricksInPlay);
         //allows users to recreate the board if they don't like the color
         if (Input.GetKeyDown(KeyCode.R) && !inPlay)
         {
@@ -81,6 +84,7 @@ public class GameManager : MonoBehaviour
         }
 
         bricks = GameObject.FindGameObjectsWithTag("brick");
+        bricksInPlay = bricks.Length;
 
     }
 
@@ -88,11 +92,11 @@ public class GameManager : MonoBehaviour
     {
 
         lives--;
-        livesText.text = "Lives: " + lives;
+        //livesText.text = "Lives: " + lives;
         Destroy(clonePaddle);
         ball = GameObject.FindGameObjectWithTag("ball");
         Destroy(ball);
-        Invoke("SetupPaddle", 1);
+        Invoke("SetupPaddle", 0.5f);
         CheckGameOver();
     }
 
@@ -104,6 +108,8 @@ public class GameManager : MonoBehaviour
             ball = GameObject.FindGameObjectWithTag("ball");
         }
     }
+
+    
 
     void CheckGameOver()
     {
